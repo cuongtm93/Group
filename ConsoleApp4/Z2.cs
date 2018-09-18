@@ -46,6 +46,9 @@ namespace ConsoleApp4
 
         public Symbol Inverse(Symbol a)
         {
+            if (Identity() == Symbol._null)
+                return Symbol._null;
+
             foreach (var x in this.SET)
                 if (Operator(x, a) == Operator(a, x) && Operator(x, a) == Identity())
                     return x;
@@ -72,19 +75,19 @@ namespace ConsoleApp4
 
         public Symbol Operator(Symbol l, Symbol r)
         {
-            if (l == Symbol.a && r == Symbol.a)
-                return Symbol.a;
+            //if (l == Symbol.a && r == Symbol.a)
+            //    return Symbol.a;
 
 
-            else if (l == Symbol.a && r == Symbol.b)
-                return Symbol.b;
+            //else if (l == Symbol.a && r == Symbol.b)
+            //    return Symbol.b;
 
 
-            else if (l == Symbol.b && r == Symbol.a)
-                return Symbol.b;
+            //else if (l == Symbol.b && r == Symbol.a)
+            //    return Symbol.b;
 
 
-            else return Symbol.a;
+            return l & r;
 
         }
     }
