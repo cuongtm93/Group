@@ -75,19 +75,18 @@ namespace ConsoleApp4
 
         public Symbol Operator(Symbol l, Symbol r)
         {
-            //if (l == Symbol.a && r == Symbol.a)
-            //    return Symbol.a;
+            if (l == Symbol.a && r == Symbol.a)
+                return Symbol.a;
 
 
-            //else if (l == Symbol.a && r == Symbol.b)
-            //    return Symbol.b;
+            else if (l == Symbol.a && r == Symbol.b)
+                return Symbol.b;
 
 
-            //else if (l == Symbol.b && r == Symbol.a)
-            //    return Symbol.b;
+            else if (l == Symbol.b && r == Symbol.a)
+                return Symbol.b;
 
-
-            return l & r;
+            else return Symbol.a;           
 
         }
     }
